@@ -1,4 +1,9 @@
 <?php
+session_start();
+if (!isset($_SESSION['username'])) {
+    header("Location: loginpg.php");
+    exit();
+}
 $conn = mysqli_connect("localhost","root","","medical_inventory");
 if(!$conn){
     die("Connection Failed: " . mysqli_connect_error());

@@ -1,4 +1,9 @@
 <?php
+session_start();
+if (!isset($_SESSION['username'])) {
+    header("Location:loginpg.php");
+    exit();
+}
 $host = "localhost";
 $uname = "root";
 $pwd = "";

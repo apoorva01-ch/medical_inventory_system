@@ -18,9 +18,11 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
     $password = $_POST["password"];
 
     // Get user from database
-    $sql = "SELECT * FROM signup WHERE username='$username'";
-    $result = mysqli_query($conn, $sql);
-
+    $sql = "SELECT * FROM signup WHERE username=?";
+$stmt = mysqli_prepare($conn, $sql);
+mysqli_stmt_bind_param($stmt, "s", $username);
+mysqli_stmt_execute($stmt);
+$result = mysqli_stmt_get_result($stmt);
     if(mysqli_num_rows($result) == 1){
 
         $row = mysqli_fetch_assoc($result);
@@ -59,14 +61,14 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
 
     body {
         font-family: 'Roboto', sans-serif;
-        height: 100vh;
         display: flex;
         flex-direction: column;
         justify-content: center;
         align-items: center;
         background: url('loginbg.jpg') no-repeat center center/cover;
         position: relative;
-        overflow: hidden;
+        min-height: 100vh;   /* height → min-height */
+    overflow-y: auto;
     }
 
     /* Overlay for readability */
@@ -299,6 +301,18 @@ backdrop-filter: blur(10px);
     </div>
     </form>
 </div>
+<script>
+  document.querySelector('.toggle-password').addEventListener('click', function() {
+    const input = document.querySelector('input[name="password"]');
+    if (input.type === 'password') {
+      input.type = 'text';
+      this.textContent = 'Hide';
+    } else {
+      input.type = 'password';
+      this.textContent = 'Show';
+    }
+  });
+</script>
 
 
 </body>
