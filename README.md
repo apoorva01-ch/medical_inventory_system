@@ -1,50 +1,45 @@
-🏥 Medical Inventory System
-A web-based Medical Inventory Management System built using PHP and MySQL to manage medicines, suppliers, and stock efficiently.
-📌 Project Overview
-This system helps manage medical store inventory by:
-Adding, updating, and deleting medicines
-Managing supplier details
-Tracking stock availability
-Monitoring stock-in records
-Preventing stock mismatches
-It reduces manual errors and makes inventory handling simple and organized.
-🚀 Features
-🧾 Add / Edit / Delete Medicines
-🏢 Supplier Management
-📦 Stock In Management
-📊 Dashboard with total counts
-🔍 View available stock
-⚙️ Backend CRUD operations
-🛠️ Tech Stack
-Frontend: HTML, CSS
-Backend: PHP
-Database: MySQL
-Server: XAMPP
-💻 How to Run This Project
-Install XAMPP
-Start Apache and MySQL
-Import the database file into phpMyAdmin
-Place the project folder inside:
-Copy code
+# Medical Inventory System
 
-C:\xampp\htdocs\
-Open browser and go to:
-Copy code
+A web-based inventory management system for medical stores, built with PHP and MySQL. 
+Helps manage medicines, suppliers, and stock records in one place.
 
-http://localhost/medical_inventory
-📂 Project Structure
-Copy code
+## Features
+
+- Add, edit, and delete medicine records
+- Supplier management
+- Stock-in tracking
+- Dashboard with total inventory counts
+- View current stock availability
+- Full CRUD operations with MySQL
+
+## Tech Stack
+
+- Frontend: HTML, CSS
+- Backend: PHP
+- Database: MySQL
+- Local Server: XAMPP
+
+## Project Structure
 
 medical_inventory/
-│
-├── backend/
 ├── frontend/
-├── database/
-└── index.php
-🎯 Purpose
-This project was built as part of BCA coursework to strengthen backend development skills and understand real-world inventory management systems.
-📌 Future Improvements
-Add authentication system
-Add low-stock alerts
-Generate sales reports
-Deploy on live server
+├── backend/
+└── README.md
+## How to Run
+
+1. Install [XAMPP](https://www.apachefriends.org/)
+2. Start Apache and MySQL from the XAMPP Control Panel
+3. Import the database file into phpMyAdmin
+4. Copy the project folder to `C:\xampp\htdocs\`
+5. Visit `http://localhost/medical_inventory/` in your browser
+
+## Future Improvements
+
+- User authentication system
+- Low stock alerts
+- Sales and usage reports
+- Live server deployment
+
+## Author
+
+Apoorva — [GitHub](https://github.com/apoorva01-ch)
